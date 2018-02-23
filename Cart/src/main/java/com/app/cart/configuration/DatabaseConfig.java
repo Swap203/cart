@@ -2,8 +2,6 @@ package com.app.cart.configuration;
 
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
-
-import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.Bean;
@@ -19,48 +17,43 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableJpaRepositories(basePackages = {"com.app.cart"})
 public class DatabaseConfig {
 
-  @Value("${spring.datasource.driver_class}")
-  private String DB_DRIVER;
-  
-  @Value("${spring.datasource.password}")
-  private String DB_PASSWORD;
-  
-  @Value("${spring.datasource.url}")
-  private String DB_URL;
-  
-  @Value("${spring.datasource.username}")
-  private String DB_USERNAME;
+    @Value("${spring.datasource.driver_class}")
+    private String DB_DRIVER;
 
-  @Value("${spring.jpa.properties.hibernate.dialect}")
-  private String HIBERNATE_DIALECT;
-  
-  @Value("${spring.jpa.show-sql}")
-  private String HIBERNATE_SHOW_SQL;
-  
-  @Value("${spring.jpa.hibernate.ddl-auto}")
-  private String HIBERNATE_HBM2DDL_AUTO;
- 
-  @Bean
-  public DataSource dataSource() {
-    DriverManagerDataSource dataSource = new DriverManagerDataSource();
-    dataSource.setDriverClassName(DB_DRIVER);
-    dataSource.setUrl(DB_URL);
-    dataSource.setUsername(DB_USERNAME);
-    dataSource.setPassword(DB_PASSWORD);
-    return dataSource;
-  }
+    @Value("${spring.datasource.password}")
+    private String DB_PASSWORD;
 
-  @Bean
-  JpaTransactionManager transactionManager(EntityManagerFactory entityManagerFactory) {
-      JpaTransactionManager transactionManager = new JpaTransactionManager();
-      transactionManager.setEntityManagerFactory(entityManagerFactory);
-      return transactionManager;
-  }
-  
-  @Bean
-  public ModelMapper modelMapper() {
-	    return new ModelMapper();
-	}
-  
-  
+    @Value("${spring.datasource.url}")
+    private String DB_URL;
+
+    @Value("${spring.datasource.username}")
+    private String DB_USERNAME;
+
+    @Value("${spring.jpa.properties.hibernate.dialect}")
+    private String HIBERNATE_DIALECT;
+
+    @Value("${spring.jpa.show-sql}")
+    private String HIBERNATE_SHOW_SQL;
+
+    @Value("${spring.jpa.hibernate.ddl-auto}")
+    private String HIBERNATE_HBM2DDL_AUTO;
+
+    @Bean
+    public DataSource dataSource() {
+        DriverManagerDataSource dataSource = new DriverManagerDataSource();
+        dataSource.setDriverClassName(DB_DRIVER);
+        dataSource.setUrl(DB_URL);
+        dataSource.setUsername(DB_USERNAME);
+        dataSource.setPassword(DB_PASSWORD);
+        return dataSource;
+    }
+
+    @Bean
+    JpaTransactionManager transactionManager(EntityManagerFactory entityManagerFactory) {
+        JpaTransactionManager transactionManager = new JpaTransactionManager();
+        transactionManager.setEntityManagerFactory(entityManagerFactory);
+        return transactionManager;
+    }
+
+
 }

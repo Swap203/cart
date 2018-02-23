@@ -11,15 +11,15 @@ import com.app.cart.entity.CategoryOffer;
 
 public interface CategoryOfferService {
 
-public ResponseEntity<?> addCategoryOffer(CategoryOffer categoryOffer);
-	
-	public ResponseEntity<?> editCategoryOffer(Integer id, CategoryOffer categoryOffer);
-	
-	public ResponseEntity<?> deleteCategoryOffer(Integer id);
-	
-	public ResponseEntity<?> getCategoryOffer(Integer id);
-	
-	public ResponseEntity<?> getAllCategoryOffers();
-	
-	public ResponseEntity<?> getOffersByCategoryId(Integer categoryId);
+    public ResponseEntity<?> addCategoryOffer(CategoryOffer categoryOffer);
+
+    public ResponseEntity<?> editCategoryOffer(Integer id, CategoryOffer categoryOffer);
+
+    public ResponseEntity<?> deleteCategoryOffer(Integer id);
+
+    public ResponseEntity<?> getCategoryOffer(Integer id);
+
+    public ResponseEntity<?> getAllCategoryOffers();
+
+    public ResponseEntity<?> getOffersByCategoryId(Integer categoryId);
 }

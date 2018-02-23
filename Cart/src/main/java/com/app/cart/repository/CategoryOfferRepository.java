@@ -1,6 +1,7 @@
 package com.app.cart.repository;
 
 import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -13,8 +14,8 @@ import com.app.cart.entity.CategoryOffer;
  */
 
 @Repository
-public interface CategoryOfferRepository extends JpaRepository<CategoryOffer, Integer>{
+public interface CategoryOfferRepository extends JpaRepository<CategoryOffer, Integer> {
 
-	@Query(value="from CategoryOffer c where c.category.categoryId=?1")
-	List<CategoryOffer> getOffersByCategoryId(Integer categoryId);
+    @Query(value = "from CategoryOffer c where c.category.categoryId=?1")
+    List<CategoryOffer> getOffersByCategoryId(Integer categoryId);
 }

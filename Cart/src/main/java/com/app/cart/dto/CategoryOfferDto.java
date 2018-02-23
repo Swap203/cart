@@ -11,28 +11,25 @@ import lombok.Data;
 @Data
 public class CategoryOfferDto {
 
-	private Integer categoryOfferId;
-	
-	private String offerDescription;
-	
-	private String couponCode;
-	
-	private Double discountPercent;
-	
-	private Double discountAmount;
-	
-	private Double minOrderAmount;
-	
-	private Double maxDiscountAmount;
-	
-	private Date creationDate;
-	
-	private Date expiryDate;
-	
-	private Category category;
-	
-	
-	
+    private Integer categoryOfferId;
 
-	
+    private String offerDescription;
+
+    private String couponCode;
+
+    private Double discountPercent;
+
+    private Double discountAmount;
+
+    private Double minOrderAmount;
+
+    private Double maxDiscountAmount;
+
+    private Date creationDate;
+
+    private Date expiryDate;
+
+    private Category category;
+
+
 }

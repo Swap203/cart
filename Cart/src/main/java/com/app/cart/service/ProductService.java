@@ -10,18 +10,18 @@ import com.app.cart.entity.Product;
 
 public interface ProductService {
 
-	public ResponseEntity<?> addProduct( Product product);
+    public ResponseEntity<?> addProduct(Product product);
 
-	public ResponseEntity<?> editProduct( Integer id,  Product product);
+    public ResponseEntity<?> editProduct(Integer id, Product product);
 
-	public ResponseEntity<?> deleteProduct( Integer id);
+    public ResponseEntity<?> deleteProduct(Integer id);
 
-	public ResponseEntity<?> getProduct( Integer id);
+    public ResponseEntity<?> getProduct(Integer id);
 
-	public ResponseEntity<?> getAllProducts();
+    public ResponseEntity<?> getAllProducts();
 
-	public ResponseEntity<?> getProductByCategory( Integer id);
+    public ResponseEntity<?> getProductByCategory(Integer id);
 
-	public ResponseEntity<?> getProductByBrand( Integer id);
+    public ResponseEntity<?> getProductByBrand(Integer id);
 
 }

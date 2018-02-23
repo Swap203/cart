@@ -8,27 +8,27 @@ import lombok.Data;
 public class OfferDto {
 
 
-	/**
-	 * @author omkar.nikam
-	 * Table for General Offers
-	 */
+    /**
+     * @author omkar.nikam
+     * Table for General Offers
+     */
 
-		private Integer offerId;
-		private String offerDescription;
-		private String couponCode;
-		
-		private Double discountPercent;
-		
-		private Double discountAmount;
-		
-		private Double minOrderAmount;
-		private Double maxDiscountAmount;
-		
-		private Integer minNumberOfProducts;
-		
-		private Date creationDate;
-		
-		private Date expiryDate;
-		
-	
+    private Integer offerId;
+    private String offerDescription;
+    private String couponCode;
+
+    private Double discountPercent;
+
+    private Double discountAmount;
+
+    private Double minOrderAmount;
+    private Double maxDiscountAmount;
+
+    private Integer minNumberOfProducts;
+
+    private Date creationDate;
+
+    private Date expiryDate;
+
+
 }
