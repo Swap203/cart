@@ -16,5 +16,9 @@ public interface BrandOfferRepository extends JpaRepository<BrandOffer, Integer>
 
     public List<BrandOffer> findByBrandBrandName(String brandName);
 
-    public List<BrandOffer> findByBrandBrandId(Integer id);
+	/**
+	 * @param id Brand Id
+	 * @return A list of BrandOffers
+	 */
+	public List<BrandOffer> findByBrandBrandId(Integer id);
 }
